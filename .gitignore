@@ -1,3 +1,4 @@
 syntax: glob
 toolchain-*
 .hg*
+opencv/build-*
