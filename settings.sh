@@ -7,6 +7,11 @@ if [[ -z "$ANDROID_NDK_ROOT_PATH" ]]; then
   echo "You need to set ANDROID_NDK environment variable, please check instructions"
   exit
 fi
+ANDROID_SDK_ROOT_PATH=${ANDROID_SDK}
+if [[ -z "$ANDROID_SDK_ROOT_PATH" ]]; then
+  echo "You need to set ANDROID_SDK environment variable, please check instructions"
+  exit
+fi
 ANDROID_API_VERSION=15
 NDK_TOOLCHAIN_ABI_VERSION=4.9
 

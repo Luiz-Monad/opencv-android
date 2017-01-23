@@ -17,9 +17,19 @@ Instructions
 ----
 * Set environment variable
 
+  - export ANDROID_SDK={Android SDK Base Path}
   - export ANDROID_NDK={Android NDK Base Path}
-  - you need msys and cmake, and the NDK of course.
+  
+* Download and install deps  
+  - You need msys and cmake, and the NDK of course.
   - pacman -S make perl mingw-w64-x86_64-clang git pkg-config python
+
+* Samples
+
+  - If you want to build the samples you need apache-ant and the SDK,
+    the SDK is only needed for this, you can skip it.
+  - wget https://www.apache.org/dist/ant/binaries/apache-ant-1.10.0-bin.zip
+    tar -xzf apache-ant-1.10.0-bin.zip
 
 * Compile
 

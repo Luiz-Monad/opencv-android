@@ -1,0 +1,12 @@
+
+ANDROID_STANDALONE_TOOLCHAIN:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a
+ANDROID_NDK_HOST_X64:BOOL=ON
+
+CMAKE_SYSTEM_NAME:STRING=Android
+CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/ndk_tools/opencv-3.2.0/opencv/sources/platforms/android/android.toolchain.cmake
+
+CMAKE_CXX_COMPILER:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang++
+CMAKE_CXX_FLAGS:STRING=--sysroot=/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/sysroot
+CMAKE_C_COMPILER:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang
+CMAKE_C_FLAGS:STRING=--sysroot=/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/sysroot
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/make

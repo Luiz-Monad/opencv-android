@@ -1,45 +1,63 @@
 
-ANDROID_API_LEVEL:STRING=15
-ANDROID_NDK_HOST_X64:BOOL=ON
-ANDROID_STANDALONE_TOOLCHAIN:PATH=c:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a
+//ANDROID_NDK:PATH=C:/Users/Luiz/AppData/Local/Android/sdk/ndk-bundle
 
-M_LIBRARY:FILEPATH=C:/Users/Luiz/AppData/Local/Android/sdk/ndk-bundle/platforms/android-15/arch-arm/usr/lib/libm.so
+ANDROID_STANDALONE_TOOLCHAIN:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a
+ANDROID_EXECUTABLE:FILEPATH=C:/Users/Luiz/AppData/Local/Android/sdk/tools/android.bat
+ANDROID_ABI:STRING=armeabi-v7a
+ANDROID_API_LEVEL:STRING=15
+ANDROID_NATIVE_API_LEVEL:STRING=15
+ANDROID_SDK_TARGET:STRING=android-15
+ANDROID_NDK_HOST_X64:BOOL=ON
+ANDROID_STL:STRING=gnustl_static
+ANDROID_EXAMPLES_WITH_LIBS:BOOL=ON
+
+BUILD_ANDROID_EXAMPLES:BOOL=ON
+BUILD_DOCS:BOOL=OFF
+BUILD_EXAMPLES:BOOL=OFF
+BUILD_JASPER:BOOL=ON
+BUILD_JPEG:BOOL=ON
+BUILD_OPENEXR:BOOL=ON
+BUILD_PNG:BOOL=ON
+BUILD_SHARED_LIBS:BOOL=OFF
+BUILD_opencv_apps:BOOL=OFF
 
 CMAKE_HOST_WIN32:BOOL=ON
-CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/ndk_tools/opencv-3.2.0/opencv/sources/platforms/android/android.toolchain.cmake
+CMAKE_SKIP_RPATH:BOOL=ON
+CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_SYSTEM_NAME:STRING=Android
-CMAKE_MAKE_PROGRAM:FILEPATH=c:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/make.exe
-CMAKE_CXX_COMPILER:FILEPATH=c:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang++.cmd
-CMAKE_C_COMPILER:FILEPATH=c:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang.cmd
-
-
-CMAKE_AR:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-gcc-ar.exe
-CMAKE_ASM_COMPILER:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang.cmd
-CMAKE_CXX_COMPILER:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang++.cmd
-CMAKE_C_COMPILER:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang.cmd
-CMAKE_INSTALL_PREFIX:PATH=C:/ndk_tools/opencv-3.2.0/opencv/build-android/install
-CMAKE_LINKER:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-ld.exe
-CMAKE_MAKE_PROGRAM:FILEPATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/make.exe
-CMAKE_NM:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-nm.exe
-CMAKE_OBJCOPY:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-objcopy.exe
-CMAKE_OBJDUMP:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-objdump.exe
-CMAKE_RANLIB:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-ranlib.exe
-CMAKE_STRIP:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-strip.exe
+CMAKE_INSTALL_PREFIX:PATH=C:/ndk_tools/opencv-3.2.0/opencv/build-android
 CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/ndk_tools/opencv-3.2.0/opencv/sources/platforms/android/android.toolchain.cmake
+CMAKE_AR:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-ar
+CMAKE_AS:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang -mllvm --x86-asm-syntax=intel 
+CMAKE_ASM_COMPILER:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang
+CMAKE_CXX_COMPILER:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang++
+CMAKE_CXX_FLAGS:STRING=--sysroot=/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/sysroot
+CMAKE_C_COMPILER:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang
+CMAKE_C_FLAGS:STRING=--sysroot=/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/sysroot
+CMAKE_LINKER:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-clang
+CMAKE_MAKE_PROGRAM:FILEPATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/make
+CMAKE_NM:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-nm
+CMAKE_OBJCOPY:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-objcopy
+CMAKE_OBJDUMP:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-objdump
+CMAKE_RANLIB:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-ranlib
+CMAKE_STRIP:PATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/bin/arm-linux-androideabi-strip
 
-INSTALL_ANDROID_EXAMPLES:BOOL=OFF
-INSTALL_C_EXAMPLES:BOOL=OFF
-INSTALL_PYTHON_EXAMPLES:BOOL=OFF
-INSTALL_TESTS:BOOL=OFF
-LIBRARY_OUTPUT_PATH:PATH=C:/ndk_tools/opencv-3.2.0/opencv/build-android-armeabi-v7a/lib/libs/armeabi-v7a
-LIBRARY_OUTPUT_PATH_ROOT:PATH=C:/ndk_tools/opencv-3.2.0/opencv/build-android-armeabi-v7a/lib
+GIT_EXECUTABLE:FILEPATH=C:/Program Files/Git/cmd/git.exe
+
+INSTALL_ANDROID_EXAMPLES:BOOL=ON
 
 M_LIBRARY:FILEPATH=C:/ndk_tools/opencv-3.2.0/toolchain-android-armeabi-v7a/sysroot/usr/lib/libm.so
 
+ANT_EXECUTABLE:FILEPATH=C:/ndk_tools/opencv-3.2.0/apache-ant-1.10.0-bin/bin/ant.bat
+
+WITH_IPP:BOOL=OFF
 WITH_CAROTENE:BOOL=OFF
+WITH_CUDA:BOOL=OFF
+WITH_CUFFT:BOOL=OFF
+WITH_OPENCL:BOOL=OFF
+
 WITH_JASPER:BOOL=ON
 WITH_JPEG:BOOL=ON
-WITH_OPENCL:BOOL=OFF
 WITH_OPENEXR:BOOL=ON
 WITH_PNG:BOOL=ON
 

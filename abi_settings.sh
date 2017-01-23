@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# $1 = architecture
+# $2 = base directory
+# $3 = pass 1 if you want to export default compiler environment variables
+
 . settings.sh
 
 BASEDIR=$2
@@ -47,6 +51,8 @@ TOOLCHAIN_PREFIX=${BASEDIR}/toolchain-android-$1
 if [ ! -d "${TOOLCHAIN_PREFIX}" ]; then
   ${ANDROID_NDK_ROOT_PATH}/build/tools/make-standalone-toolchain.sh --toolchain=${NDK_TOOLCHAIN_ABI}-${NDK_TOOLCHAIN_ABI_VERSION} --platform=android-${ANDROID_API_VERSION} --install-dir=${TOOLCHAIN_PREFIX}
 fi
+
+export ANDROID_EXECUTABLE="${ANDROID_SDK}/tools/android.bat"
 
 export CROSS_BIN=${TOOLCHAIN_PREFIX}/bin/
 export CROSS_PREFIX=${TOOLCHAIN_PREFIX}/bin/${NDK_CROSS_PREFIX}-
