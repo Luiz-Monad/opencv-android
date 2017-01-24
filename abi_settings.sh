@@ -52,14 +52,13 @@ if [ ! -d "${TOOLCHAIN_PREFIX}" ]; then
   ${ANDROID_NDK_ROOT_PATH}/build/tools/make-standalone-toolchain.sh --toolchain=${NDK_TOOLCHAIN_ABI}-${NDK_TOOLCHAIN_ABI_VERSION} --platform=android-${ANDROID_API_VERSION} --install-dir=${TOOLCHAIN_PREFIX}
 fi
 
-export ANDROID_EXECUTABLE="${ANDROID_SDK}/tools/android.bat"
-
-export CROSS_BIN=${TOOLCHAIN_PREFIX}/bin/
-export CROSS_PREFIX=${TOOLCHAIN_PREFIX}/bin/${NDK_CROSS_PREFIX}-
+export CROSS_BIN="${TOOLCHAIN_PREFIX}/bin/"
+export CROSS_PREFIX="${TOOLCHAIN_PREFIX}/bin/${NDK_CROSS_PREFIX}-"
 export NDK_SYSROOT="${TOOLCHAIN_PREFIX}/sysroot"
 export LD_LIBRARY_PATH="${TOOLCHAIN_PREFIX}/lib"
 export PKG_CONFIG_LIBDIR="${TOOLCHAIN_PREFIX}/lib/pkgconfig"
 export PKG_CONFIG_PATH="${TOOLCHAIN_PREFIX}/lib/pkgconfig"
+export ANDROID_EXECUTABLE="${ANDROID_SDK}/tools/android.bat"
 
 if [ $3 == 1 ]; then
   export CC="${CROSS_PREFIX}clang"

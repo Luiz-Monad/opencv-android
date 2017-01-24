@@ -22,7 +22,7 @@ Instructions
   
 * Download and install deps  
   - You need msys and cmake, and the NDK of course.
-  - pacman -S make perl mingw-w64-x86_64-clang git pkg-config python
+  - pacman -S make perl mingw-w64-x86_64-clang git pkg-config python python2
 
 * Samples
 
