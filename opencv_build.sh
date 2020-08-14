@@ -13,7 +13,7 @@ export INSTALL="`pwd`/build-android"
 export CMAKE_TOOLCHAIN="$SRC/platforms/android/android.toolchain.cmake"
 export ANT_DIR="$2/apache-ant-1.10.0-bin"
 
-rm -rf build-android-$1
+#rm -rf build-android-$1
 
 mkdir build-android-$1
 pushd build-android-$1
@@ -143,7 +143,7 @@ echo "=-=-=-=-="
 echo " make it "
 echo "=-=-=-=-="
 
-make clean
+#make clean
 make -j${NUMBER_OF_CORES} && make install || exit 1
 
 popd
